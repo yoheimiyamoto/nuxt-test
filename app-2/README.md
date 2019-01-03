@@ -1,5 +1,5 @@
 # app-2
-
+Kindle Nuxt.js ビギナーズガイド
 > Nuxt.js project
 
 ## Build Setup
