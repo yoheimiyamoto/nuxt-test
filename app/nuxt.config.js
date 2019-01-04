@@ -20,6 +20,12 @@ module.exports = {
   /*
   ** Build configuration
   */
+  modules: [
+    '@nuxtjs/axios'
+  ],
+  axios: {
+
+  },
   build: {
     /*
     ** Run ESLint on save
