@@ -18,6 +18,15 @@
           target="_blank"
           class="button--grey">GitHub</a>
       </div>
+      
+      <div>
+        <ul>
+          <li v-for="item in items" :key="item.id">
+            <h4>{{item.title}}</h4>
+          </li>
+        </ul>
+      </div>
+
     </div>
   </section>
 </template>
@@ -29,9 +38,15 @@ export default {
   components: {
     AppLogo
   },
-  async mounted() {
-      const data = JSON.stringify(await this.$axios.$get('https://qiita.com/api/v2/items?query=tag:nuxt.js'))
-      console.log(data)
+  // async mounted() {
+  //     const data = JSON.stringify(await this.$axios.$get('https://qiita.com/api/v2/items?query=tag:nuxt.js'))
+  //     console.log(data)
+  // }
+  async asyncData({ app }) {
+    const items = await app.$axios.$get('https://qiita.com/api/v2/items?query=tag:nuxt.js')
+    return {
+      items
+    }
   }
 }
 </script>
