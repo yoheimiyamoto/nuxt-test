@@ -1,7 +1,7 @@
 <template>
     <div>
         <p>
-            User ID: {{userId}}
+            User ID: {{userID}}
         </p>
     </div>
 </template>
@@ -10,7 +10,7 @@
 export default {
     data() {
         return {
-            userId: this.$route.params.id
+            userID: this.$route.params.userid
         }
     }
 }
