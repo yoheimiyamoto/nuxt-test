@@ -1,13 +1,22 @@
 # nuxt-test
 nuxtをいろいろ勉強してみる
 
-# インストール
-```
-// cliツールがインストールされていることを確認
-npx -v
 
+# 環境構築
+```
+// cliインストール
+npm i -g @vue/cli @vue/cli-init
+```
+
+# プロジェクト作成
 // プロジェクト作成
-npx create-nuxt-app <project-name>
+vue init nuxt-community/starter-template {アプリ名}
+
+// アプリのディレクトリに移動
+cd {アプリ名}
+
+// インストール
+npm install
 
 // サーバー起動
 npm run dev
