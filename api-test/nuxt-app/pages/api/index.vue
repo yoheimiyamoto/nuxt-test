@@ -1,15 +1,16 @@
 <template>
-    <p>hello</p>
+    <p>
+        {{ data.data }}
+    </p>
 </template>
 
 <script>
 export default {
-    async mounted() {
-        console.log(
-            JSON.stringify(await
-                this.$axios.$get('http://localhost:8080/hello', true, '')
-            )
-        )
+    async asyncData({app}) {
+        const data = await app.$axios.$get('http://localhost:8080/api')
+        return {
+            data
+        }
     }
 }
 </script>
