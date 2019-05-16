@@ -9,6 +9,7 @@ npm i -g @vue/cli @vue/cli-init
 ```
 
 # プロジェクト作成
+```
 // プロジェクト作成
 vue init nuxt-community/starter-template {アプリ名}
 
