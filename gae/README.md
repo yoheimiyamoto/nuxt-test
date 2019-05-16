@@ -14,4 +14,8 @@ npm run dev
 // ビルド
 // nuxt-app/nuxt.config.js を変更してビルド先を backend/dist に変更しておく
 npm run generate
+
+// gaeサーバー起動
+cd ../backend
+dev_appserver.py app.yaml
 ```
